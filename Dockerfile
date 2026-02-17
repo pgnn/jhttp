@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine3.9
+FROM eclipse-temurin:8-jre-alpine
 LABEL maintainer="Shivakumar Ningappa <shivagowda@gmail.com>"
 
 # Copy the already build jar to the image
