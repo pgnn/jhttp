@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jhttp-app
+  # Harness will automatically put this in se-lab-prod-ns
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: jhttp-web
+  template:
+    metadata:
+      labels:
+        app: jhttp-web
+    spec:
+      containers:
+      - name: jhttp-container
+        image: <+artifact.image> # This "magic" variable pulls your image from Harness
+        ports:
+        - containerPort: 8888     # jhttp default port
