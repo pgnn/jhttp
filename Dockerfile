@@ -8,6 +8,7 @@ WORKDIR /app
 COPY target/jhttp-1.0-SNAPSHOT.jar /app/jhttp.jar
 COPY index.html /app/
 COPY logo.png /app/
+COPY city.png /app/
 
 # 3. Expose port 8888
 EXPOSE 8888
