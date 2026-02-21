@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jhttp-app
-  # Harness will automatically put this in se-lab-prod-ns
 spec:
-  replicas: 1 
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: jhttp-web
@@ -15,6 +14,7 @@ spec:
     spec:
       containers:
       - name: jhttp-container
-        image: <+artifact.image> # This "magic" variable pulls your image from Harness
+        # This tells Kubernetes to look in values.yaml for the 'image' key
+        image: {{ .Values.image }} 
         ports:
-        - containerPort: 8888     # jhttp default port
+        - containerPort: 8888
