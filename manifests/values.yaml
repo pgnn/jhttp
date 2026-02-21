@@ -1,0 +1,4 @@
+# This maps the Harness artifact variable to a name your manifest can use
+image: <+artifact.image>
+name: jhttp-app
+replicaCount: 1
