@@ -7,7 +7,7 @@ WORKDIR /app
 # 2. Copy the jar AND your website files into /app
 COPY target/jhttp-1.0-SNAPSHOT.jar /app/jhttp.jar
 COPY index.html /app/
-COPY blue-bird.png /app/
+COPY logo.png /app/
 
 # 3. Expose port 8888
 EXPOSE 8888
