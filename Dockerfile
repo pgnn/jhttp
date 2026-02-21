@@ -14,4 +14,4 @@ COPY city.png /app/
 EXPOSE 8888
 
 # 4. Run the jar FROM the /app directory
-ENTRYPOINT [ "java", "-jar", "jhttp.jar" ]
+ENTRYPOINT [ "java", "-jar", "jhttp.jar", "/app/index.html" ]
