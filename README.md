@@ -1,5 +1,5 @@
 # JHTTP
-JHTTP is a simple HTTP server written in the Java 8. PN
+JHTTP is a simple HTTP server written in the Java 8.
 
 
 
