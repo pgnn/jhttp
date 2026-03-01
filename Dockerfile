@@ -1,4 +1,4 @@
-FROM eclipse-temurin:8-jre-alpine
+FROM eclipse-temurin:17-jre-alpine
 LABEL maintainer="Shivakumar Ningappa <shivagowda@gmail.com>"
 
 # 1. Create a dedicated app folder
